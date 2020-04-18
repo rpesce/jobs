@@ -19,7 +19,6 @@ for item in pages:
     # Get the HTML and create a BeautifulSoup object
     page = requests.get(item)
     soup = BeautifulSoup(page.text, "html.parser")
-
     # Identify links in the bottom and use decompose() to remove it from parse tree
     bottom_links = soup.find(class_='AlphaNav')
     bottom_links.decompose()
